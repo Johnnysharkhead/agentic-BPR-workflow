@@ -1,0 +1,97 @@
+{
+  "sharepoint_item": {
+    "Title": "BATCH-002 | Sterile filtration | Critical Deviation",
+    "BatchID": "BATCH-002",
+    "Severity": "Critical",
+    "Deviation": "除菌过滤后完整性测试失败且缺乏更换滤芯记录，导致批次无菌保证失效。",
+    "Recommendation": "除菌滤芯后测失败且记录缺失，违反GMP Annex 1强制性要求，定性为Critical --> 滤芯破损导致产品可能遭受微生物污染，直接威胁患者生命安全 --> 立即隔离该批次产品并启动偏差调查，防止不合格品出厂 --> 开展根本原因分析，对受影响批次进行无菌检测或判定报废，补齐缺失记录 --> 优化滤芯更换SOP，引入双人核对机制并加强人员GMP培训。"
+  },
+  "details": {
+    "sequence": 2,
+    "product": "Demo injectable 10 mg/mL",
+    "process_step": "Sterile filtration",
+    "observation": "Filter integrity post-use bubble point failed. No replacement filter record found.",
+    "expected_severity": "Critical",
+    "analysis_status": "pending_human_review",
+    "deviations": [
+      {
+        "step": "Sterile filtration",
+        "issue": "Post-use filter integrity test (bubble point) failed",
+        "impact": "The sterility assurance of the batch cannot be guaranteed. A failed integrity test indicates a potential breach in the sterile barrier, meaning the product may have been exposed to microbial contamination.",
+        "compliance_gap": "Violation of GMP requirements for sterile product manufacturing (e.g., EU GMP Annex 1 / FDA Sterile Drug Products guidance), which mandates that filters must be integrity tested post-use to confirm they remained intact during the process."
+      },
+      {
+        "step": "Sterile filtration",
+        "issue": "Missing replacement filter record",
+        "impact": "Lack of traceability and failure to follow corrective action protocols. If the filter failed, there is no evidence that a corrective re-filtration step was performed or documented.",
+        "compliance_gap": "Failure to adhere to Standard Operating Procedures (SOP) regarding deviation handling and equipment replacement documentation."
+      }
+    ],
+    "capa": {
+      "immediate_correction": [
+        "立即对该批次产品进行隔离封存，将其状态标记为“待处理/不合格”，严禁出厂。",
+        "启动正式的偏差调查流程，核查该批次的所有生产记录及环境监测数据。",
+        "对该批次产品进行无菌检查（Sterility Test）或根据风险评估直接判定为报废。",
+        "追溯并核实滤芯更换的实际操作情况，尝试通过相关人员访谈补齐缺失的记录说明。"
+      ],
+      "root_cause_analysis": [
+        "设备/物料原因：滤芯在过滤过程中可能因压力波动、兼容性问题或操作不当导致物理破损。",
+        "人员/流程原因：操作员未严格执行SOP，在滤芯失效后未按规定记录更换过程，存在严重的合规意识缺失。",
+        "管理原因：缺乏有效的实时监督机制，导致记录缺失在生产过程中未被及时发现并纠正。"
+      ],
+      "preventive_actions": [
+        "修订除菌过滤操作SOP，明确滤芯失效后的标准处置流程及强制性记录要求。",
+        "实施“关键步骤双人核对”机制，确保滤芯更换及完整性测试结果由第二人签字确认。",
+        "对生产人员开展专项GMP培训，重点强调Annex 1关于无菌保证的要求及数据完整性（ALCOA+）的重要性。",
+        "评估引入自动化完整性测试系统，实现测试结果的电子化记录，减少人工记录缺失的风险。"
+      ]
+    },
+    "human_review": {
+      "required": true,
+      "approved": null,
+      "requests": [
+        {
+          "id": "350629f934ae67c98e7acc0107de3f0a",
+          "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+          "deviations": [
+            {
+              "step": "Sterile filtration",
+              "issue": "Post-use filter integrity test (bubble point) failed",
+              "impact": "The sterility assurance of the batch cannot be guaranteed. A failed integrity test indicates a potential breach in the sterile barrier, meaning the product may have been exposed to microbial contamination.",
+              "compliance_gap": "Violation of GMP requirements for sterile product manufacturing (e.g., EU GMP Annex 1 / FDA Sterile Drug Products guidance), which mandates that filters must be integrity tested post-use to confirm they remained intact during the process."
+            },
+            {
+              "step": "Sterile filtration",
+              "issue": "Missing replacement filter record",
+              "impact": "Lack of traceability and failure to follow corrective action protocols. If the filter failed, there is no evidence that a corrective re-filtration step was performed or documented.",
+              "compliance_gap": "Failure to adhere to Standard Operating Procedures (SOP) regarding deviation handling and equipment replacement documentation."
+            }
+          ],
+          "recommendation": {
+            "deviation_cn": "除菌过滤后完整性测试失败且缺乏更换滤芯记录，导致批次无菌保证失效。",
+            "summary": "除菌滤芯后测失败且记录缺失，违反GMP Annex 1强制性要求，定性为Critical --> 滤芯破损导致产品可能遭受微生物污染，直接威胁患者生命安全 --> 立即隔离该批次产品并启动偏差调查，防止不合格品出厂 --> 开展根本原因分析，对受影响批次进行无菌检测或判定报废，补齐缺失记录 --> 优化滤芯更换SOP，引入双人核对机制并加强人员GMP培训。",
+            "immediate_correction": [
+              "立即对该批次产品进行隔离封存，将其状态标记为“待处理/不合格”，严禁出厂。",
+              "启动正式的偏差调查流程，核查该批次的所有生产记录及环境监测数据。",
+              "对该批次产品进行无菌检查（Sterility Test）或根据风险评估直接判定为报废。",
+              "追溯并核实滤芯更换的实际操作情况，尝试通过相关人员访谈补齐缺失的记录说明。"
+            ],
+            "root_cause_analysis": [
+              "设备/物料原因：滤芯在过滤过程中可能因压力波动、兼容性问题或操作不当导致物理破损。",
+              "人员/流程原因：操作员未严格执行SOP，在滤芯失效后未按规定记录更换过程，存在严重的合规意识缺失。",
+              "管理原因：缺乏有效的实时监督机制，导致记录缺失在生产过程中未被及时发现并纠正。"
+            ],
+            "preventive_actions": [
+              "修订除菌过滤操作SOP，明确滤芯失效后的标准处置流程及强制性记录要求。",
+              "实施“关键步骤双人核对”机制，确保滤芯更换及完整性测试结果由第二人签字确认。",
+              "对生产人员开展专项GMP培训，重点强调Annex 1关于无菌保证的要求及数据完整性（ALCOA+）的重要性。",
+              "评估引入自动化完整性测试系统，实现测试结果的电子化记录，减少人工记录缺失的风险。"
+            ]
+          }
+        }
+      ]
+    },
+    "final_action": null,
+    "generated_at": "2026-05-30T16:27:29.371909+00:00"
+  }
+}

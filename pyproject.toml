@@ -1,0 +1,24 @@
+[project]
+name = "novartis-agentic-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ruijie", email = "ruijiel@axis.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.3.2",
+    "langchain-openai>=1.2.2",
+    "langgraph>=1.2.2",
+    "python-dotenv>=1.2.2",
+    "msal>=1.31.0",
+    "requests>=2.32.0",
+]
+
+[project.scripts]
+novartis-agentic-demo = "novartis_agentic_demo:main"
+
+[build-system]
+requires = ["uv_build>=0.10.7,<0.11.0"]
+build-backend = "uv_build"

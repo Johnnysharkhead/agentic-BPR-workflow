@@ -1,0 +1,77 @@
+{
+  "sharepoint_item": {
+    "Title": "BATCH-005 | Packaging | Major Deviation",
+    "BatchID": "BATCH-005",
+    "Severity": "Major",
+    "Deviation": "包装线清场记录单缺失主管审核签名",
+    "Recommendation": "包装清场记录缺失关键签名，违反GDP及SOP，定性为Major偏差 --> 无法证明清场验证的有效性，存在前批次物料混入风险，威胁产品纯度与患者安全 --> 立即对该批次产品及清场记录进行追溯核查，确保无物料残留 --> 针对记录缺失开展人员GDP专项培训，强化签名合规意识 --> 优化清场审核流程，引入双人核对机制或数字化签名强制校验，从系统层面防止遗漏。"
+  },
+  "details": {
+    "sequence": 5,
+    "product": "Demo oral suspension",
+    "process_step": "Packaging",
+    "observation": "Line clearance checklist is missing supervisor signature. No mix-up observed in reconciliation records.",
+    "expected_severity": "Major",
+    "analysis_status": "pending_human_review",
+    "deviations": [
+      {
+        "step": "Packaging",
+        "issue": "Line clearance checklist is missing supervisor signature",
+        "root_cause_category": "Documentation Compliance",
+        "impact": "Failure to follow GDP (Good Documentation Practices) and SOP for line clearance verification, potentially compromising the assurance that the area was clear of previous product/materials."
+      }
+    ],
+    "capa": {
+      "immediate_correction": [
+        "立即对涉及的包装批次进行物料平衡核查，确认无前批次产品或标签残留。",
+        "由相关主管对缺失签名的清场记录进行回顾性审核，并签署偏差处理说明，严禁直接补签。"
+      ],
+      "root_cause_analysis": [
+        "人员意识不足：操作员或主管对GDP（良好记录习惯）的执行力度不够，将签名视为形式而非质量控制环节。",
+        "审核流程缺陷：现有的清场核对流程缺乏强制性的闭环检查，导致签名缺失在进入下一工序前未被及时发现。"
+      ],
+      "preventive_actions": [
+        "组织包装车间全体人员开展GDP及清场SOP专项培训，并进行考核，确保理解签名在质量保证中的法律与技术意义。",
+        "在包装线启动前增加“记录完整性检查”环节，由QA或第二核对人确认所有清场签名完整后方可开始生产。",
+        "评估引入电子批记录（eBR）系统，通过系统强制校验功能，实现无签名无法跳转至下一生产步骤。"
+      ]
+    },
+    "human_review": {
+      "required": true,
+      "approved": null,
+      "requests": [
+        {
+          "id": "cdef9e99ddb76387c218040f91317fb5",
+          "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+          "deviations": [
+            {
+              "step": "Packaging",
+              "issue": "Line clearance checklist is missing supervisor signature",
+              "root_cause_category": "Documentation Compliance",
+              "impact": "Failure to follow GDP (Good Documentation Practices) and SOP for line clearance verification, potentially compromising the assurance that the area was clear of previous product/materials."
+            }
+          ],
+          "recommendation": {
+            "deviation_cn": "包装线清场记录单缺失主管审核签名",
+            "summary": "包装清场记录缺失关键签名，违反GDP及SOP，定性为Major偏差 --> 无法证明清场验证的有效性，存在前批次物料混入风险，威胁产品纯度与患者安全 --> 立即对该批次产品及清场记录进行追溯核查，确保无物料残留 --> 针对记录缺失开展人员GDP专项培训，强化签名合规意识 --> 优化清场审核流程，引入双人核对机制或数字化签名强制校验，从系统层面防止遗漏。",
+            "immediate_correction": [
+              "立即对涉及的包装批次进行物料平衡核查，确认无前批次产品或标签残留。",
+              "由相关主管对缺失签名的清场记录进行回顾性审核，并签署偏差处理说明，严禁直接补签。"
+            ],
+            "root_cause_analysis": [
+              "人员意识不足：操作员或主管对GDP（良好记录习惯）的执行力度不够，将签名视为形式而非质量控制环节。",
+              "审核流程缺陷：现有的清场核对流程缺乏强制性的闭环检查，导致签名缺失在进入下一工序前未被及时发现。"
+            ],
+            "preventive_actions": [
+              "组织包装车间全体人员开展GDP及清场SOP专项培训，并进行考核，确保理解签名在质量保证中的法律与技术意义。",
+              "在包装线启动前增加“记录完整性检查”环节，由QA或第二核对人确认所有清场签名完整后方可开始生产。",
+              "评估引入电子批记录（eBR）系统，通过系统强制校验功能，实现无签名无法跳转至下一生产步骤。"
+            ]
+          }
+        }
+      ]
+    },
+    "final_action": null,
+    "generated_at": "2026-05-30T16:27:34.752387+00:00"
+  }
+}

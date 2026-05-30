@@ -1,0 +1,77 @@
+{
+  "sharepoint_item": {
+    "Title": "BATCH-003 | Blending | Major Deviation",
+    "BatchID": "BATCH-003",
+    "Severity": "Major",
+    "Deviation": "混合工序混合时间（42分钟）低于批准的最低限度（45-60分钟）。",
+    "Recommendation": "混合时间不足导致工艺参数未在验证范围内，定性为Major偏差 --> 可能导致药物成分分布不均，影响成品含量均匀度及药效稳定性 --> 立即隔离该批次产品并启动含量均匀度专项抽样检测，以评估质量影响 --> 针对操作员误操作或设备计时误差进行根本原因分析并纠正 --> 通过升级设备联动锁死机制或强化人员培训防止再次发生。"
+  },
+  "details": {
+    "sequence": 3,
+    "product": "Demo capsule 25 mg",
+    "process_step": "Blending",
+    "observation": "Blend time was 42 minutes instead of approved range 45-60 minutes. Operator noted line clearance was completed.",
+    "expected_severity": "Major",
+    "analysis_status": "pending_human_review",
+    "deviations": [
+      {
+        "step": "Blending",
+        "parameter": "Blend time",
+        "observed_value": "42 minutes",
+        "expected_range": "45-60 minutes",
+        "description": "The actual blending time was shorter than the minimum approved limit, potentially impacting the homogeneity of the drug product."
+      }
+    ],
+    "capa": {
+      "immediate_correction": [
+        "立即对该批次物料进行隔离，并在偏差调查期间禁止进入下一道工序。",
+        "增加含量均匀度（Content Uniformity）的抽样点数量，对混合后的物料进行全方位取样检测，验证混合均匀度是否合格。"
+      ],
+      "root_cause_analysis": [
+        "操作员人为失误：操作员在计时过程中记录错误或提前停止了设备运行。",
+        "设备计时系统故障：混合机自带的定时器出现偏差，导致实际运行时间与显示时间不一致。"
+      ],
+      "preventive_actions": [
+        "设备升级：在混合机控制系统中设置“时间互锁”功能，在达到最低设定时间（45分钟）前，设备无法通过手动方式停止运行。",
+        "人员培训：针对该批次操作员及相关岗位人员开展偏差案例培训，强调关键工艺参数（CPP）的合规性要求及记录准确性的重要性。"
+      ]
+    },
+    "human_review": {
+      "required": true,
+      "approved": null,
+      "requests": [
+        {
+          "id": "a25cc1c9f36be44de1459452419777a7",
+          "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+          "deviations": [
+            {
+              "step": "Blending",
+              "parameter": "Blend time",
+              "observed_value": "42 minutes",
+              "expected_range": "45-60 minutes",
+              "description": "The actual blending time was shorter than the minimum approved limit, potentially impacting the homogeneity of the drug product."
+            }
+          ],
+          "recommendation": {
+            "deviation_cn": "混合工序混合时间（42分钟）低于批准的最低限度（45-60分钟）。",
+            "summary": "混合时间不足导致工艺参数未在验证范围内，定性为Major偏差 --> 可能导致药物成分分布不均，影响成品含量均匀度及药效稳定性 --> 立即隔离该批次产品并启动含量均匀度专项抽样检测，以评估质量影响 --> 针对操作员误操作或设备计时误差进行根本原因分析并纠正 --> 通过升级设备联动锁死机制或强化人员培训防止再次发生。",
+            "immediate_correction": [
+              "立即对该批次物料进行隔离，并在偏差调查期间禁止进入下一道工序。",
+              "增加含量均匀度（Content Uniformity）的抽样点数量，对混合后的物料进行全方位取样检测，验证混合均匀度是否合格。"
+            ],
+            "root_cause_analysis": [
+              "操作员人为失误：操作员在计时过程中记录错误或提前停止了设备运行。",
+              "设备计时系统故障：混合机自带的定时器出现偏差，导致实际运行时间与显示时间不一致。"
+            ],
+            "preventive_actions": [
+              "设备升级：在混合机控制系统中设置“时间互锁”功能，在达到最低设定时间（45分钟）前，设备无法通过手动方式停止运行。",
+              "人员培训：针对该批次操作员及相关岗位人员开展偏差案例培训，强调关键工艺参数（CPP）的合规性要求及记录准确性的重要性。"
+            ]
+          }
+        }
+      ]
+    },
+    "final_action": null,
+    "generated_at": "2026-05-30T16:27:29.650936+00:00"
+  }
+}

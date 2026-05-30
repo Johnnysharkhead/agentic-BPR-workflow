@@ -1,0 +1,395 @@
+{
+  "report_metadata": {
+    "report_name": "BPR Agentic Deviation Analysis",
+    "generated_at": "2026-05-30T16:27:34.753369+00:00",
+    "record_count": 5,
+    "completed_count": 2,
+    "pending_human_review_count": 3
+  },
+  "sharepoint_items": [
+    {
+      "Title": "BATCH-001 | Cold-chain storage before packaging | Minor Deviation",
+      "BatchID": "BATCH-001",
+      "Severity": "Minor",
+      "Deviation": "包装前冷链存储温度短暂超限（9°C，持续4分钟）",
+      "Recommendation": "温度轻微超限且持续时间极短，对产品质量影响极低，定性为Minor --> API在短时间内轻微偏离2-8°C，稳定性风险可控，无患者安全风险 --> 立即隔离受影响批次并启动稳定性评估，确保产品质量 --> 检查温控设备运行状态及报警阈值设置，排除设备故障 --> 优化冷链转移流程并加强人员操作培训，防止类似超限发生。"
+    },
+    {
+      "Title": "BATCH-002 | Sterile filtration | Critical Deviation",
+      "BatchID": "BATCH-002",
+      "Severity": "Critical",
+      "Deviation": "除菌过滤后完整性测试失败且缺乏更换滤芯记录，导致批次无菌保证失效。",
+      "Recommendation": "除菌滤芯后测失败且记录缺失，违反GMP Annex 1强制性要求，定性为Critical --> 滤芯破损导致产品可能遭受微生物污染，直接威胁患者生命安全 --> 立即隔离该批次产品并启动偏差调查，防止不合格品出厂 --> 开展根本原因分析，对受影响批次进行无菌检测或判定报废，补齐缺失记录 --> 优化滤芯更换SOP，引入双人核对机制并加强人员GMP培训。"
+    },
+    {
+      "Title": "BATCH-003 | Blending | Major Deviation",
+      "BatchID": "BATCH-003",
+      "Severity": "Major",
+      "Deviation": "混合工序混合时间（42分钟）低于批准的最低限度（45-60分钟）。",
+      "Recommendation": "混合时间不足导致工艺参数未在验证范围内，定性为Major偏差 --> 可能导致药物成分分布不均，影响成品含量均匀度及药效稳定性 --> 立即隔离该批次产品并启动含量均匀度专项抽样检测，以评估质量影响 --> 针对操作员误操作或设备计时误差进行根本原因分析并纠正 --> 通过升级设备联动锁死机制或强化人员培训防止再次发生。"
+    },
+    {
+      "Title": "BATCH-004 | Compression | Minor Deviation",
+      "BatchID": "BATCH-004",
+      "Severity": "Minor",
+      "Deviation": "片压工序中抽检片剂硬度低于标准限度（3.8 kP < 4.0 kP）。",
+      "Recommendation": "片剂硬度轻微低于限度且发生率低，不影响整体批次质量，定性为Minor --> 硬度偏低可能导致片剂脆碎度增加，影响药物稳定性或运输完整性 --> 立即调整压片压力以将硬度恢复至规格范围内，确保后续产品合格 --> 优化压片机压力参数设置并验证其稳定性，消除参数波动 --> 完善设备运行参数的监控频率及操作员对硬度趋势的预警机制。"
+    },
+    {
+      "Title": "BATCH-005 | Packaging | Major Deviation",
+      "BatchID": "BATCH-005",
+      "Severity": "Major",
+      "Deviation": "包装线清场记录单缺失主管审核签名",
+      "Recommendation": "包装清场记录缺失关键签名，违反GDP及SOP，定性为Major偏差 --> 无法证明清场验证的有效性，存在前批次物料混入风险，威胁产品纯度与患者安全 --> 立即对该批次产品及清场记录进行追溯核查，确保无物料残留 --> 针对记录缺失开展人员GDP专项培训，强化签名合规意识 --> 优化清场审核流程，引入双人核对机制或数字化签名强制校验，从系统层面防止遗漏。"
+    }
+  ],
+  "batch_results": [
+    {
+      "sharepoint_item": {
+        "Title": "BATCH-001 | Cold-chain storage before packaging | Minor Deviation",
+        "BatchID": "BATCH-001",
+        "Severity": "Minor",
+        "Deviation": "包装前冷链存储温度短暂超限（9°C，持续4分钟）",
+        "Recommendation": "温度轻微超限且持续时间极短，对产品质量影响极低，定性为Minor --> API在短时间内轻微偏离2-8°C，稳定性风险可控，无患者安全风险 --> 立即隔离受影响批次并启动稳定性评估，确保产品质量 --> 检查温控设备运行状态及报警阈值设置，排除设备故障 --> 优化冷链转移流程并加强人员操作培训，防止类似超限发生。"
+      },
+      "details": {
+        "sequence": 1,
+        "product": "Demo tablet 50 mg",
+        "process_step": "Cold-chain storage before packaging",
+        "observation": "Temperature reached 9 C for 4 minutes; limit is 2-8 C.",
+        "expected_severity": "Minor",
+        "analysis_status": "completed",
+        "deviations": [
+          {
+            "step": "Cold-chain storage before packaging",
+            "issue": "Temperature excursion detected: actual temperature reached 9°C, exceeding the upper limit of 8°C.",
+            "duration": "4 minutes",
+            "limit": "2-8°C",
+            "impact": "Potential impact on the stability of the active pharmaceutical ingredient (API) due to temperature deviation."
+          }
+        ],
+        "capa": {
+          "immediate_correction": [
+            "立即将受影响的物料进行隔离，并贴上“待处理”标签，防止误用。",
+            "调取温度记录仪完整数据，核实超限的具体时间段及最高温度。",
+            "启动质量评估，对比API稳定性数据（如加速试验或压力试验），确认4分钟/9°C是否在可接受范围内。"
+          ],
+          "root_cause_analysis": [
+            "设备因素：冷库门开启时间过长或密封条老化，导致冷空气流失，环境温度短时上升。",
+            "系统因素：温控系统的温度回升补偿机制响应延迟，导致温度在波动时未能及时回调。"
+          ],
+          "preventive_actions": [
+            "对冷库门密封性进行检查与维护，必要时安装自动关门装置或门开启超时报警系统。",
+            "修订冷链操作规程（SOP），明确物料进出冷库的最高允许时间，减少门开启频率。",
+            "对相关操作人员进行冷链管理意识培训，强调严格遵守温控要求的重要性。"
+          ]
+        },
+        "human_review": {
+          "required": false,
+          "approved": null,
+          "requests": []
+        },
+        "final_action": "偏差报告已归档",
+        "generated_at": "2026-05-30T16:27:29.089877+00:00"
+      }
+    },
+    {
+      "sharepoint_item": {
+        "Title": "BATCH-002 | Sterile filtration | Critical Deviation",
+        "BatchID": "BATCH-002",
+        "Severity": "Critical",
+        "Deviation": "除菌过滤后完整性测试失败且缺乏更换滤芯记录，导致批次无菌保证失效。",
+        "Recommendation": "除菌滤芯后测失败且记录缺失，违反GMP Annex 1强制性要求，定性为Critical --> 滤芯破损导致产品可能遭受微生物污染，直接威胁患者生命安全 --> 立即隔离该批次产品并启动偏差调查，防止不合格品出厂 --> 开展根本原因分析，对受影响批次进行无菌检测或判定报废，补齐缺失记录 --> 优化滤芯更换SOP，引入双人核对机制并加强人员GMP培训。"
+      },
+      "details": {
+        "sequence": 2,
+        "product": "Demo injectable 10 mg/mL",
+        "process_step": "Sterile filtration",
+        "observation": "Filter integrity post-use bubble point failed. No replacement filter record found.",
+        "expected_severity": "Critical",
+        "analysis_status": "pending_human_review",
+        "deviations": [
+          {
+            "step": "Sterile filtration",
+            "issue": "Post-use filter integrity test (bubble point) failed",
+            "impact": "The sterility assurance of the batch cannot be guaranteed. A failed integrity test indicates a potential breach in the sterile barrier, meaning the product may have been exposed to microbial contamination.",
+            "compliance_gap": "Violation of GMP requirements for sterile product manufacturing (e.g., EU GMP Annex 1 / FDA Sterile Drug Products guidance), which mandates that filters must be integrity tested post-use to confirm they remained intact during the process."
+          },
+          {
+            "step": "Sterile filtration",
+            "issue": "Missing replacement filter record",
+            "impact": "Lack of traceability and failure to follow corrective action protocols. If the filter failed, there is no evidence that a corrective re-filtration step was performed or documented.",
+            "compliance_gap": "Failure to adhere to Standard Operating Procedures (SOP) regarding deviation handling and equipment replacement documentation."
+          }
+        ],
+        "capa": {
+          "immediate_correction": [
+            "立即对该批次产品进行隔离封存，将其状态标记为“待处理/不合格”，严禁出厂。",
+            "启动正式的偏差调查流程，核查该批次的所有生产记录及环境监测数据。",
+            "对该批次产品进行无菌检查（Sterility Test）或根据风险评估直接判定为报废。",
+            "追溯并核实滤芯更换的实际操作情况，尝试通过相关人员访谈补齐缺失的记录说明。"
+          ],
+          "root_cause_analysis": [
+            "设备/物料原因：滤芯在过滤过程中可能因压力波动、兼容性问题或操作不当导致物理破损。",
+            "人员/流程原因：操作员未严格执行SOP，在滤芯失效后未按规定记录更换过程，存在严重的合规意识缺失。",
+            "管理原因：缺乏有效的实时监督机制，导致记录缺失在生产过程中未被及时发现并纠正。"
+          ],
+          "preventive_actions": [
+            "修订除菌过滤操作SOP，明确滤芯失效后的标准处置流程及强制性记录要求。",
+            "实施“关键步骤双人核对”机制，确保滤芯更换及完整性测试结果由第二人签字确认。",
+            "对生产人员开展专项GMP培训，重点强调Annex 1关于无菌保证的要求及数据完整性（ALCOA+）的重要性。",
+            "评估引入自动化完整性测试系统，实现测试结果的电子化记录，减少人工记录缺失的风险。"
+          ]
+        },
+        "human_review": {
+          "required": true,
+          "approved": null,
+          "requests": [
+            {
+              "id": "350629f934ae67c98e7acc0107de3f0a",
+              "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+              "deviations": [
+                {
+                  "step": "Sterile filtration",
+                  "issue": "Post-use filter integrity test (bubble point) failed",
+                  "impact": "The sterility assurance of the batch cannot be guaranteed. A failed integrity test indicates a potential breach in the sterile barrier, meaning the product may have been exposed to microbial contamination.",
+                  "compliance_gap": "Violation of GMP requirements for sterile product manufacturing (e.g., EU GMP Annex 1 / FDA Sterile Drug Products guidance), which mandates that filters must be integrity tested post-use to confirm they remained intact during the process."
+                },
+                {
+                  "step": "Sterile filtration",
+                  "issue": "Missing replacement filter record",
+                  "impact": "Lack of traceability and failure to follow corrective action protocols. If the filter failed, there is no evidence that a corrective re-filtration step was performed or documented.",
+                  "compliance_gap": "Failure to adhere to Standard Operating Procedures (SOP) regarding deviation handling and equipment replacement documentation."
+                }
+              ],
+              "recommendation": {
+                "deviation_cn": "除菌过滤后完整性测试失败且缺乏更换滤芯记录，导致批次无菌保证失效。",
+                "summary": "除菌滤芯后测失败且记录缺失，违反GMP Annex 1强制性要求，定性为Critical --> 滤芯破损导致产品可能遭受微生物污染，直接威胁患者生命安全 --> 立即隔离该批次产品并启动偏差调查，防止不合格品出厂 --> 开展根本原因分析，对受影响批次进行无菌检测或判定报废，补齐缺失记录 --> 优化滤芯更换SOP，引入双人核对机制并加强人员GMP培训。",
+                "immediate_correction": [
+                  "立即对该批次产品进行隔离封存，将其状态标记为“待处理/不合格”，严禁出厂。",
+                  "启动正式的偏差调查流程，核查该批次的所有生产记录及环境监测数据。",
+                  "对该批次产品进行无菌检查（Sterility Test）或根据风险评估直接判定为报废。",
+                  "追溯并核实滤芯更换的实际操作情况，尝试通过相关人员访谈补齐缺失的记录说明。"
+                ],
+                "root_cause_analysis": [
+                  "设备/物料原因：滤芯在过滤过程中可能因压力波动、兼容性问题或操作不当导致物理破损。",
+                  "人员/流程原因：操作员未严格执行SOP，在滤芯失效后未按规定记录更换过程，存在严重的合规意识缺失。",
+                  "管理原因：缺乏有效的实时监督机制，导致记录缺失在生产过程中未被及时发现并纠正。"
+                ],
+                "preventive_actions": [
+                  "修订除菌过滤操作SOP，明确滤芯失效后的标准处置流程及强制性记录要求。",
+                  "实施“关键步骤双人核对”机制，确保滤芯更换及完整性测试结果由第二人签字确认。",
+                  "对生产人员开展专项GMP培训，重点强调Annex 1关于无菌保证的要求及数据完整性（ALCOA+）的重要性。",
+                  "评估引入自动化完整性测试系统，实现测试结果的电子化记录，减少人工记录缺失的风险。"
+                ]
+              }
+            }
+          ]
+        },
+        "final_action": null,
+        "generated_at": "2026-05-30T16:27:29.371909+00:00"
+      }
+    },
+    {
+      "sharepoint_item": {
+        "Title": "BATCH-003 | Blending | Major Deviation",
+        "BatchID": "BATCH-003",
+        "Severity": "Major",
+        "Deviation": "混合工序混合时间（42分钟）低于批准的最低限度（45-60分钟）。",
+        "Recommendation": "混合时间不足导致工艺参数未在验证范围内，定性为Major偏差 --> 可能导致药物成分分布不均，影响成品含量均匀度及药效稳定性 --> 立即隔离该批次产品并启动含量均匀度专项抽样检测，以评估质量影响 --> 针对操作员误操作或设备计时误差进行根本原因分析并纠正 --> 通过升级设备联动锁死机制或强化人员培训防止再次发生。"
+      },
+      "details": {
+        "sequence": 3,
+        "product": "Demo capsule 25 mg",
+        "process_step": "Blending",
+        "observation": "Blend time was 42 minutes instead of approved range 45-60 minutes. Operator noted line clearance was completed.",
+        "expected_severity": "Major",
+        "analysis_status": "pending_human_review",
+        "deviations": [
+          {
+            "step": "Blending",
+            "parameter": "Blend time",
+            "observed_value": "42 minutes",
+            "expected_range": "45-60 minutes",
+            "description": "The actual blending time was shorter than the minimum approved limit, potentially impacting the homogeneity of the drug product."
+          }
+        ],
+        "capa": {
+          "immediate_correction": [
+            "立即对该批次物料进行隔离，并在偏差调查期间禁止进入下一道工序。",
+            "增加含量均匀度（Content Uniformity）的抽样点数量，对混合后的物料进行全方位取样检测，验证混合均匀度是否合格。"
+          ],
+          "root_cause_analysis": [
+            "操作员人为失误：操作员在计时过程中记录错误或提前停止了设备运行。",
+            "设备计时系统故障：混合机自带的定时器出现偏差，导致实际运行时间与显示时间不一致。"
+          ],
+          "preventive_actions": [
+            "设备升级：在混合机控制系统中设置“时间互锁”功能，在达到最低设定时间（45分钟）前，设备无法通过手动方式停止运行。",
+            "人员培训：针对该批次操作员及相关岗位人员开展偏差案例培训，强调关键工艺参数（CPP）的合规性要求及记录准确性的重要性。"
+          ]
+        },
+        "human_review": {
+          "required": true,
+          "approved": null,
+          "requests": [
+            {
+              "id": "a25cc1c9f36be44de1459452419777a7",
+              "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+              "deviations": [
+                {
+                  "step": "Blending",
+                  "parameter": "Blend time",
+                  "observed_value": "42 minutes",
+                  "expected_range": "45-60 minutes",
+                  "description": "The actual blending time was shorter than the minimum approved limit, potentially impacting the homogeneity of the drug product."
+                }
+              ],
+              "recommendation": {
+                "deviation_cn": "混合工序混合时间（42分钟）低于批准的最低限度（45-60分钟）。",
+                "summary": "混合时间不足导致工艺参数未在验证范围内，定性为Major偏差 --> 可能导致药物成分分布不均，影响成品含量均匀度及药效稳定性 --> 立即隔离该批次产品并启动含量均匀度专项抽样检测，以评估质量影响 --> 针对操作员误操作或设备计时误差进行根本原因分析并纠正 --> 通过升级设备联动锁死机制或强化人员培训防止再次发生。",
+                "immediate_correction": [
+                  "立即对该批次物料进行隔离，并在偏差调查期间禁止进入下一道工序。",
+                  "增加含量均匀度（Content Uniformity）的抽样点数量，对混合后的物料进行全方位取样检测，验证混合均匀度是否合格。"
+                ],
+                "root_cause_analysis": [
+                  "操作员人为失误：操作员在计时过程中记录错误或提前停止了设备运行。",
+                  "设备计时系统故障：混合机自带的定时器出现偏差，导致实际运行时间与显示时间不一致。"
+                ],
+                "preventive_actions": [
+                  "设备升级：在混合机控制系统中设置“时间互锁”功能，在达到最低设定时间（45分钟）前，设备无法通过手动方式停止运行。",
+                  "人员培训：针对该批次操作员及相关岗位人员开展偏差案例培训，强调关键工艺参数（CPP）的合规性要求及记录准确性的重要性。"
+                ]
+              }
+            }
+          ]
+        },
+        "final_action": null,
+        "generated_at": "2026-05-30T16:27:29.650936+00:00"
+      }
+    },
+    {
+      "sharepoint_item": {
+        "Title": "BATCH-004 | Compression | Minor Deviation",
+        "BatchID": "BATCH-004",
+        "Severity": "Minor",
+        "Deviation": "片压工序中抽检片剂硬度低于标准限度（3.8 kP < 4.0 kP）。",
+        "Recommendation": "片剂硬度轻微低于限度且发生率低，不影响整体批次质量，定性为Minor --> 硬度偏低可能导致片剂脆碎度增加，影响药物稳定性或运输完整性 --> 立即调整压片压力以将硬度恢复至规格范围内，确保后续产品合格 --> 优化压片机压力参数设置并验证其稳定性，消除参数波动 --> 完善设备运行参数的监控频率及操作员对硬度趋势的预警机制。"
+      },
+      "details": {
+        "sequence": 4,
+        "product": "Demo tablet 100 mg",
+        "process_step": "Compression",
+        "observation": "2 out of 20 sampled tablets showed hardness of 3.8 kP, marginally below the lower spec limit of 4.0 kP. All other attributes (weight, thickness, friability) were within specification. The deviation was detected during in-process checks and the compression force was adjusted immediately.",
+        "expected_severity": "Minor",
+        "analysis_status": "completed",
+        "deviations": [
+          {
+            "step": "Compression",
+            "parameter": "Hardness",
+            "observation": "2 out of 20 sampled tablets (10%) recorded a hardness of 3.8 kP, which is below the lower specification limit of 4.0 kP.",
+            "root_cause_category": "Process Parameter / Equipment Adjustment",
+            "corrective_action": "Compression force was adjusted immediately during in-process checks."
+          }
+        ],
+        "capa": {
+          "immediate_correction": [
+            "立即调整压片机压力参数，使片剂硬度恢复至 4.0 kP 以上的合格范围。",
+            "对偏差发生时间点前后的产品进行追溯抽检，确认受影响产品的范围及数量。"
+          ],
+          "root_cause_analysis": [
+            "压片机压力设置点偏移或设备压力控制系统出现短期波动。",
+            "操作人员对硬度趋势的监控不足，未能及时在参数漂移初期进行微调。"
+          ],
+          "preventive_actions": [
+            "重新评估并优化该产品的压片工艺参数范围，建立更合理的预警限（Alert Limit）。",
+            "对操作人员进行设备参数调整及过程趋势分析的专项培训，提高对质量漂移的敏感度。"
+          ]
+        },
+        "human_review": {
+          "required": false,
+          "approved": null,
+          "requests": []
+        },
+        "final_action": "偏差报告已归档",
+        "generated_at": "2026-05-30T16:27:34.461946+00:00"
+      }
+    },
+    {
+      "sharepoint_item": {
+        "Title": "BATCH-005 | Packaging | Major Deviation",
+        "BatchID": "BATCH-005",
+        "Severity": "Major",
+        "Deviation": "包装线清场记录单缺失主管审核签名",
+        "Recommendation": "包装清场记录缺失关键签名，违反GDP及SOP，定性为Major偏差 --> 无法证明清场验证的有效性，存在前批次物料混入风险，威胁产品纯度与患者安全 --> 立即对该批次产品及清场记录进行追溯核查，确保无物料残留 --> 针对记录缺失开展人员GDP专项培训，强化签名合规意识 --> 优化清场审核流程，引入双人核对机制或数字化签名强制校验，从系统层面防止遗漏。"
+      },
+      "details": {
+        "sequence": 5,
+        "product": "Demo oral suspension",
+        "process_step": "Packaging",
+        "observation": "Line clearance checklist is missing supervisor signature. No mix-up observed in reconciliation records.",
+        "expected_severity": "Major",
+        "analysis_status": "pending_human_review",
+        "deviations": [
+          {
+            "step": "Packaging",
+            "issue": "Line clearance checklist is missing supervisor signature",
+            "root_cause_category": "Documentation Compliance",
+            "impact": "Failure to follow GDP (Good Documentation Practices) and SOP for line clearance verification, potentially compromising the assurance that the area was clear of previous product/materials."
+          }
+        ],
+        "capa": {
+          "immediate_correction": [
+            "立即对涉及的包装批次进行物料平衡核查，确认无前批次产品或标签残留。",
+            "由相关主管对缺失签名的清场记录进行回顾性审核，并签署偏差处理说明，严禁直接补签。"
+          ],
+          "root_cause_analysis": [
+            "人员意识不足：操作员或主管对GDP（良好记录习惯）的执行力度不够，将签名视为形式而非质量控制环节。",
+            "审核流程缺陷：现有的清场核对流程缺乏强制性的闭环检查，导致签名缺失在进入下一工序前未被及时发现。"
+          ],
+          "preventive_actions": [
+            "组织包装车间全体人员开展GDP及清场SOP专项培训，并进行考核，确保理解签名在质量保证中的法律与技术意义。",
+            "在包装线启动前增加“记录完整性检查”环节，由QA或第二核对人确认所有清场签名完整后方可开始生产。",
+            "评估引入电子批记录（eBR）系统，通过系统强制校验功能，实现无签名无法跳转至下一生产步骤。"
+          ]
+        },
+        "human_review": {
+          "required": true,
+          "approved": null,
+          "requests": [
+            {
+              "id": "cdef9e99ddb76387c218040f91317fb5",
+              "message": "AI identified a Major/Critical deviation. Please review the recommendation and decide whether to trigger CAPA:",
+              "deviations": [
+                {
+                  "step": "Packaging",
+                  "issue": "Line clearance checklist is missing supervisor signature",
+                  "root_cause_category": "Documentation Compliance",
+                  "impact": "Failure to follow GDP (Good Documentation Practices) and SOP for line clearance verification, potentially compromising the assurance that the area was clear of previous product/materials."
+                }
+              ],
+              "recommendation": {
+                "deviation_cn": "包装线清场记录单缺失主管审核签名",
+                "summary": "包装清场记录缺失关键签名，违反GDP及SOP，定性为Major偏差 --> 无法证明清场验证的有效性，存在前批次物料混入风险，威胁产品纯度与患者安全 --> 立即对该批次产品及清场记录进行追溯核查，确保无物料残留 --> 针对记录缺失开展人员GDP专项培训，强化签名合规意识 --> 优化清场审核流程，引入双人核对机制或数字化签名强制校验，从系统层面防止遗漏。",
+                "immediate_correction": [
+                  "立即对涉及的包装批次进行物料平衡核查，确认无前批次产品或标签残留。",
+                  "由相关主管对缺失签名的清场记录进行回顾性审核，并签署偏差处理说明，严禁直接补签。"
+                ],
+                "root_cause_analysis": [
+                  "人员意识不足：操作员或主管对GDP（良好记录习惯）的执行力度不够，将签名视为形式而非质量控制环节。",
+                  "审核流程缺陷：现有的清场核对流程缺乏强制性的闭环检查，导致签名缺失在进入下一工序前未被及时发现。"
+                ],
+                "preventive_actions": [
+                  "组织包装车间全体人员开展GDP及清场SOP专项培训，并进行考核，确保理解签名在质量保证中的法律与技术意义。",
+                  "在包装线启动前增加“记录完整性检查”环节，由QA或第二核对人确认所有清场签名完整后方可开始生产。",
+                  "评估引入电子批记录（eBR）系统，通过系统强制校验功能，实现无签名无法跳转至下一生产步骤。"
+                ]
+              }
+            }
+          ]
+        },
+        "final_action": null,
+        "generated_at": "2026-05-30T16:27:34.752387+00:00"
+      }
+    }
+  ]
+}

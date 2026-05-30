@@ -1,0 +1,49 @@
+{
+  "sharepoint_item": {
+    "Title": "BATCH-001 | Cold-chain storage before packaging | Minor Deviation",
+    "BatchID": "BATCH-001",
+    "Severity": "Minor",
+    "Deviation": "包装前冷链存储温度短暂超限（9°C，持续4分钟）",
+    "Recommendation": "温度轻微超限且持续时间极短，对产品质量影响极低，定性为Minor --> API在短时间内轻微偏离2-8°C，稳定性风险可控，无患者安全风险 --> 立即隔离受影响批次并启动稳定性评估，确保产品质量 --> 检查温控设备运行状态及报警阈值设置，排除设备故障 --> 优化冷链转移流程并加强人员操作培训，防止类似超限发生。"
+  },
+  "details": {
+    "sequence": 1,
+    "product": "Demo tablet 50 mg",
+    "process_step": "Cold-chain storage before packaging",
+    "observation": "Temperature reached 9 C for 4 minutes; limit is 2-8 C.",
+    "expected_severity": "Minor",
+    "analysis_status": "completed",
+    "deviations": [
+      {
+        "step": "Cold-chain storage before packaging",
+        "issue": "Temperature excursion detected: actual temperature reached 9°C, exceeding the upper limit of 8°C.",
+        "duration": "4 minutes",
+        "limit": "2-8°C",
+        "impact": "Potential impact on the stability of the active pharmaceutical ingredient (API) due to temperature deviation."
+      }
+    ],
+    "capa": {
+      "immediate_correction": [
+        "立即将受影响的物料进行隔离，并贴上“待处理”标签，防止误用。",
+        "调取温度记录仪完整数据，核实超限的具体时间段及最高温度。",
+        "启动质量评估，对比API稳定性数据（如加速试验或压力试验），确认4分钟/9°C是否在可接受范围内。"
+      ],
+      "root_cause_analysis": [
+        "设备因素：冷库门开启时间过长或密封条老化，导致冷空气流失，环境温度短时上升。",
+        "系统因素：温控系统的温度回升补偿机制响应延迟，导致温度在波动时未能及时回调。"
+      ],
+      "preventive_actions": [
+        "对冷库门密封性进行检查与维护，必要时安装自动关门装置或门开启超时报警系统。",
+        "修订冷链操作规程（SOP），明确物料进出冷库的最高允许时间，减少门开启频率。",
+        "对相关操作人员进行冷链管理意识培训，强调严格遵守温控要求的重要性。"
+      ]
+    },
+    "human_review": {
+      "required": false,
+      "approved": null,
+      "requests": []
+    },
+    "final_action": "偏差报告已归档",
+    "generated_at": "2026-05-30T16:27:29.089877+00:00"
+  }
+}

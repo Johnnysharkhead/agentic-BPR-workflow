@@ -1,0 +1,47 @@
+{
+  "sharepoint_item": {
+    "Title": "BATCH-004 | Compression | Minor Deviation",
+    "BatchID": "BATCH-004",
+    "Severity": "Minor",
+    "Deviation": "片压工序中抽检片剂硬度低于标准限度（3.8 kP < 4.0 kP）。",
+    "Recommendation": "片剂硬度轻微低于限度且发生率低，不影响整体批次质量，定性为Minor --> 硬度偏低可能导致片剂脆碎度增加，影响药物稳定性或运输完整性 --> 立即调整压片压力以将硬度恢复至规格范围内，确保后续产品合格 --> 优化压片机压力参数设置并验证其稳定性，消除参数波动 --> 完善设备运行参数的监控频率及操作员对硬度趋势的预警机制。"
+  },
+  "details": {
+    "sequence": 4,
+    "product": "Demo tablet 100 mg",
+    "process_step": "Compression",
+    "observation": "2 out of 20 sampled tablets showed hardness of 3.8 kP, marginally below the lower spec limit of 4.0 kP. All other attributes (weight, thickness, friability) were within specification. The deviation was detected during in-process checks and the compression force was adjusted immediately.",
+    "expected_severity": "Minor",
+    "analysis_status": "completed",
+    "deviations": [
+      {
+        "step": "Compression",
+        "parameter": "Hardness",
+        "observation": "2 out of 20 sampled tablets (10%) recorded a hardness of 3.8 kP, which is below the lower specification limit of 4.0 kP.",
+        "root_cause_category": "Process Parameter / Equipment Adjustment",
+        "corrective_action": "Compression force was adjusted immediately during in-process checks."
+      }
+    ],
+    "capa": {
+      "immediate_correction": [
+        "立即调整压片机压力参数，使片剂硬度恢复至 4.0 kP 以上的合格范围。",
+        "对偏差发生时间点前后的产品进行追溯抽检，确认受影响产品的范围及数量。"
+      ],
+      "root_cause_analysis": [
+        "压片机压力设置点偏移或设备压力控制系统出现短期波动。",
+        "操作人员对硬度趋势的监控不足，未能及时在参数漂移初期进行微调。"
+      ],
+      "preventive_actions": [
+        "重新评估并优化该产品的压片工艺参数范围，建立更合理的预警限（Alert Limit）。",
+        "对操作人员进行设备参数调整及过程趋势分析的专项培训，提高对质量漂移的敏感度。"
+      ]
+    },
+    "human_review": {
+      "required": false,
+      "approved": null,
+      "requests": []
+    },
+    "final_action": "偏差报告已归档",
+    "generated_at": "2026-05-30T16:27:34.461946+00:00"
+  }
+}
